@@ -17,6 +17,8 @@ theme.typography.h4 = {
   }
 }
 
+// theme.palette.mode = 'dark'
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>

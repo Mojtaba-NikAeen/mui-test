@@ -23,7 +23,7 @@ const Instructors = () => {
         container
         mb={12}
       >
-        <Grid item xs={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card sx={{ width: '100%' }}>
             <CardContent sx={{ textAlign: 'center' }}>
               <Image
@@ -48,7 +48,7 @@ const Instructors = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card sx={{ width: '100%' }}>
             <CardContent sx={{ textAlign: 'center' }}>
               <Image
@@ -73,7 +73,7 @@ const Instructors = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card sx={{ width: '100%' }}>
             <CardContent sx={{ textAlign: 'center' }}>
               <Image
@@ -84,7 +84,7 @@ const Instructors = () => {
                 alt='our prestigious instructor 3'
               />
               <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-                Adam Stevenson
+                Adam Smith
               </Typography>
               <Typography sx={{ mb: 1.5 }} color='text.secondary'>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus
@@ -98,7 +98,7 @@ const Instructors = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card sx={{ width: '100%' }}>
             <CardContent sx={{ textAlign: 'center' }}>
               <Image
@@ -109,7 +109,7 @@ const Instructors = () => {
                 alt='our prestigious instructor 4'
               />
               <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-                Eve Morningstar
+                Eve Smith
               </Typography>
               <Typography sx={{ mb: 1.5 }} color='text.secondary'>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus

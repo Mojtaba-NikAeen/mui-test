@@ -25,7 +25,7 @@ const NewsletterSignup = () => {
           sx={{
             textAlign: 'center',
             borderRadius: 1,
-            backgroundColor: '#5760daec',
+            backgroundColor: '#c3c6c9',
             height: '100%'
           }}
         >
@@ -45,7 +45,7 @@ const NewsletterSignup = () => {
           sx={{
             borderRadius: 1,
             textAlign: 'center',
-            backgroundColor: '#5760daec',
+            backgroundColor: '#c3c6c9',
             height: '100%'
           }}
         >
@@ -53,15 +53,15 @@ const NewsletterSignup = () => {
             <ButtonGroup
               variant='contained'
               aria-label='outlined primary button group'
-              sx={{ width: '80%' }}
+              sx={{ width: '90%' }}
             >
               <Input
                 placeholder=' your Email address'
                 sx={{
                   backgroundColor: 'white',
                   width: '70%',
-                  borderTopLeftRadius: 2,
-                  borderBottomLeftRadius: 2
+                  borderTopLeftRadius: 4,
+                  borderBottomLeftRadius: 4
                 }}
               />
               <Button sx={{ width: '30%' }} color='secondary'>
@@ -92,7 +92,7 @@ const NewsletterSignup = () => {
             borderTopLeftRadius: 2,
             borderBottomLeftRadius: 2,
             textAlign: 'center',
-            backgroundColor: '#5760dacc',
+            backgroundColor: '#c3c6c9',
             height: '100%'
           }}
         >
@@ -110,7 +110,7 @@ const NewsletterSignup = () => {
           sx={{
             borderTopRightRadius: 2,
             borderBottomRightRadius: 2,
-            backgroundColor: '#5760dacc',
+            backgroundColor: '#c3c6c9',
             height: '100%'
           }}
         >
@@ -123,7 +123,9 @@ const NewsletterSignup = () => {
               placeholder=' your Email'
               sx={{
                 backgroundColor: 'white',
-                width: '60%'
+                width: '60%',
+                borderTopLeftRadius: 4,
+                borderBottomLeftRadius: 4
               }}
             />
             <Button sx={{ width: '40%' }} color='secondary'>
