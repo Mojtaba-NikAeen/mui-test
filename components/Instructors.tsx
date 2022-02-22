@@ -102,14 +102,14 @@ const Instructors = () => {
           <Card sx={{ width: '100%' }}>
             <CardContent sx={{ textAlign: 'center' }}>
               <Image
-                src={'https://randomuser.me/api/portraits/women/71.jpg'}
+                src={'https://randomuser.me/api/portraits/men/71.jpg'}
                 width={150}
                 height={150}
                 unoptimized
                 alt='our prestigious instructor 4'
               />
               <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-                Eve Smith
+                Steve Smith
               </Typography>
               <Typography sx={{ mb: 1.5 }} color='text.secondary'>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus
