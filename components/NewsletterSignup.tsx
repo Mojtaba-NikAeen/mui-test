@@ -3,8 +3,10 @@ import Grid from '@mui/material/Grid'
 import Input from '@mui/material/Input'
 import Button from '@mui/material/Button'
 import ButtonGroup from '@mui/material/ButtonGroup'
+import { useTranslation } from 'next-i18next'
 
 const NewsletterSignup = () => {
+  const { t } = useTranslation()
   return (
     <>
       <Grid
@@ -31,7 +33,7 @@ const NewsletterSignup = () => {
         >
           <Grid item>
             <Typography variant='h5' sx={{ fontWeight: 40 }}>
-              Signup for our newsletter
+              {t('newsletter')}
             </Typography>
           </Grid>
         </Grid>
@@ -56,7 +58,7 @@ const NewsletterSignup = () => {
               sx={{ width: '90%' }}
             >
               <Input
-                placeholder=' your Email address'
+                placeholder={t('btn-placeholder')}
                 sx={{
                   backgroundColor: 'white',
                   width: '70%',
@@ -65,7 +67,7 @@ const NewsletterSignup = () => {
                 }}
               />
               <Button sx={{ width: '30%' }} color='secondary'>
-                Submit
+                {t('btn-text')}
               </Button>
             </ButtonGroup>
           </Grid>
@@ -97,7 +99,7 @@ const NewsletterSignup = () => {
           }}
         >
           <Typography variant='h6' sx={{ fontWeight: 400 }}>
-            Signup for our newsletter
+            {t('newsletter')}
           </Typography>
         </Grid>
         <Grid
@@ -120,7 +122,7 @@ const NewsletterSignup = () => {
             sx={{ width: '80%' }}
           >
             <Input
-              placeholder=' your Email'
+              placeholder={t('btn-placeholder')}
               sx={{
                 backgroundColor: 'white',
                 width: '60%',
@@ -129,7 +131,7 @@ const NewsletterSignup = () => {
               }}
             />
             <Button sx={{ width: '40%' }} color='secondary'>
-              Submit
+              {t('btn-text')}
             </Button>
           </ButtonGroup>
         </Grid>

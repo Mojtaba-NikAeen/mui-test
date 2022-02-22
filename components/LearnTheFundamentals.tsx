@@ -2,8 +2,10 @@ import Grid from '@mui/material/Grid'
 import Image from 'next/image'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
+import { useTranslation } from 'next-i18next'
 
 const LearnTheFundamentals = () => {
+  const { t } = useTranslation()
   return (
     <Grid
       container
@@ -36,18 +38,17 @@ const LearnTheFundamentals = () => {
       >
         <Grid item>
           <Typography variant='h4' color='black'>
-            Learn the Fundamentals
+            {t('fundamentals')}
           </Typography>
         </Grid>
         <Grid item>
           <Typography variant='body1' color='black' paddingX={2}>
-            We focus on teaching our students the fundamentals of the latest and greatest
-            technologies to prepare them for their first dev role{' '}
+            {t('text')}
           </Typography>
         </Grid>
         <Grid item>
           <Button size='large' color='secondary' variant='contained'>
-            Sign up to Start
+            {t('funbtn')}
           </Button>
         </Grid>
       </Grid>

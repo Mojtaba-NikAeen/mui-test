@@ -14,8 +14,10 @@ import HomeIcon from '@mui/icons-material/Home'
 import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import LogoutIcon from '@mui/icons-material/Logout'
 import LoginIcon from '@mui/icons-material/Login'
+import { useTranslation } from 'next-i18next'
 
 const NavBar = () => {
+  const { t } = useTranslation()
   const [auth, setAuth] = useState(false)
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
@@ -51,7 +53,7 @@ const NavBar = () => {
                 color: 'white'
               }}
             >
-              MaterialUI
+              {t('mui')}
             </Typography>
           </Link>
           {!auth && (
@@ -81,7 +83,7 @@ const NavBar = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={loginoutHandler}>Login</MenuItem>
+                <MenuItem onClick={loginoutHandler}>{t('login')}</MenuItem>
               </Menu>
             </div>
           )}
@@ -112,8 +114,8 @@ const NavBar = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={loginoutHandler}>Log Out</MenuItem>
+                <MenuItem onClick={handleClose}>{t('profile')}</MenuItem>
+                <MenuItem onClick={loginoutHandler}>{t('logout')}</MenuItem>
               </Menu>
             </div>
           )}
@@ -132,15 +134,19 @@ const NavBar = () => {
       >
         {auth && (
           <BottomNavigation sx={{ backgroundColor: '#212529' }} showLabels>
-            <BottomNavigationAction label='Homepage' icon={<HomeIcon />} sx={{ color: 'white' }} />
             <BottomNavigationAction
-              label='Profile'
+              label={t('homepage')}
+              icon={<HomeIcon />}
+              sx={{ color: 'white' }}
+            />
+            <BottomNavigationAction
+              label={t('profile')}
               icon={<AccountBoxIcon />}
               sx={{ color: 'white' }}
             />
             <BottomNavigationAction
               onClick={loginoutHandler}
-              label='Log Out'
+              label={t('logout')}
               icon={<LogoutIcon />}
               sx={{ color: 'white' }}
             />
@@ -151,7 +157,7 @@ const NavBar = () => {
           <BottomNavigation sx={{ backgroundColor: '#212529' }} showLabels>
             <BottomNavigationAction
               onClick={loginoutHandler}
-              label='Login'
+              label={t('login')}
               icon={<LoginIcon />}
               sx={{ color: 'white' }}
             />

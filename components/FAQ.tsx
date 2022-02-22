@@ -5,6 +5,7 @@ import AccordionSummary from '@mui/material/AccordionSummary'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { styled, experimental_sx as sx } from '@mui/system'
+import { useTranslation } from 'next-i18next'
 
 const CustomText = styled('p')(
   sx({
@@ -16,6 +17,7 @@ const CustomText = styled('p')(
 )
 
 const FAQ = () => {
+  const { t } = useTranslation()
   const [expanded, setExpanded] = React.useState<string | false>(false)
 
   const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -25,7 +27,7 @@ const FAQ = () => {
   return (
     <div style={{ marginBottom: 50 }}>
       <Typography fontSize={30} color='white' sx={{ textAlign: 'center', display: 'block' }}>
-        Frequently asked Questions
+        {t('FAQ')}
       </Typography>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary
@@ -33,13 +35,10 @@ const FAQ = () => {
           aria-controls='panel1bh-content'
           id='panel1bh-header'
         >
-          <CustomText>Where exactly are you located?</CustomText>
+          <CustomText>{t('q1')}</CustomText>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-            maximus est, id dignissim quam.
-          </Typography>
+          <Typography>{t('lorem')}</Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
@@ -48,13 +47,10 @@ const FAQ = () => {
           aria-controls='panel2bh-content'
           id='panel2bh-header'
         >
-          <CustomText>How much does it cost to attend?</CustomText>
+          <CustomText>{t('q2')}</CustomText>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
-            diam eros in elit. Pellentesque convallis laoreet laoreet.
-          </Typography>
+          <Typography>{t('lorem')}</Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
@@ -63,13 +59,10 @@ const FAQ = () => {
           aria-controls='panel3bh-content'
           id='panel3bh-header'
         >
-          <CustomText>What do I need to Know?</CustomText>
+          <CustomText>{t('q3')}</CustomText>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-            vitae egestas augue. Duis vel est augue.
-          </Typography>
+          <Typography>{t('lorem')}</Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
@@ -78,13 +71,10 @@ const FAQ = () => {
           aria-controls='panel4bh-content'
           id='panel4bh-header'
         >
-          <CustomText>How Do I sign up?</CustomText>
+          <CustomText>{t('q4')}</CustomText>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-            vitae egestas augue. Duis vel est augue.
-          </Typography>
+          <Typography>{t('lorem')}</Typography>
         </AccordionDetails>
       </Accordion>
     </div>

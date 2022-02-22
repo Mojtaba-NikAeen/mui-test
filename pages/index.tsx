@@ -7,8 +7,10 @@ import Cards from '../components/Cards'
 import LearnTheFundamentals from '../components/LearnTheFundamentals'
 import FAQ from '../components/FAQ'
 import Instructors from '../components/Instructors'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { GetStaticProps } from 'next'
 
-export default function CustomStyles() {
+export default function Home() {
   return (
     <>
       <Head>
@@ -27,3 +29,9 @@ export default function CustomStyles() {
     </>
   )
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale!, ['common']))
+  }
+})

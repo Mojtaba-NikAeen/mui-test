@@ -7,8 +7,10 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import PeopleIcon from '@mui/icons-material/People'
 import PersonIcon from '@mui/icons-material/Person'
+import { useTranslation } from 'next-i18next'
 
 const Cards = () => {
+  const { t } = useTranslation()
   return (
     <Grid my={3} justifyContent='space-around' container>
       <Grid container justifyContent='center' item my={2} xs={7} sm={3} sx={{ height: '100%' }}>
@@ -18,16 +20,15 @@ const Cards = () => {
               <LaptopIcon sx={{ fontSize: 70 }} />
             </Typography>
             <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-              Virtual
+              {t('card1')}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color='text.secondary'>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus
-              dolorum esse eligendi?
+              {t('lorem')}
             </Typography>
           </CardContent>
           <CardActions sx={{ mb: 1 }}>
             <Button sx={{ mx: 'auto' }} size='medium' variant='contained'>
-              Learn More
+              {t('learnmore')}
             </Button>
           </CardActions>
         </Card>
@@ -39,16 +40,15 @@ const Cards = () => {
               <PersonIcon sx={{ fontSize: 70 }} />
             </Typography>
             <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-              Hybrid
+              {t('card2')}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color='text.secondary'>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus
-              dolorum esse eligendi?
+              {t('lorem')}
             </Typography>
           </CardContent>
           <CardActions sx={{ mb: 1 }}>
             <Button sx={{ mx: 'auto' }} size='medium' variant='contained'>
-              Learn More
+              {t('learnmore')}
             </Button>
           </CardActions>
         </Card>
@@ -60,16 +60,15 @@ const Cards = () => {
               <PeopleIcon sx={{ fontSize: 70 }} />
             </Typography>
             <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-              In Person
+              {t('card3')}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color='text.secondary'>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus
-              dolorum esse eligendi?
+              {t('lorem')}
             </Typography>
           </CardContent>
           <CardActions sx={{ mb: 1 }}>
             <Button sx={{ mx: 'auto' }} size='medium' variant='contained'>
-              Learn More
+              {t('learnmore')}
             </Button>
           </CardActions>
         </Card>

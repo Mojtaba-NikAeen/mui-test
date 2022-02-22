@@ -8,12 +8,15 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import YouTubeIcon from '@mui/icons-material/YouTube'
+import { useTranslation } from 'next-i18next'
 
 const Instructors = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <Typography fontSize={30} color='white' sx={{ textAlign: 'center', display: 'block' }}>
-        Our Instructors
+        {t('instsheader')}
       </Typography>
       <Grid
         spacing={2}
@@ -34,11 +37,10 @@ const Instructors = () => {
                 alt='our prestigious instructor 1'
               />
               <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-                Abbas Doe
+                {t('inst1')}
               </Typography>
               <Typography sx={{ mb: 1.5 }} color='text.secondary'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus
-                dolorum esse eligendi?
+                {t('lorem')}
               </Typography>
               <LinkedInIcon />
               <InstagramIcon />
@@ -59,11 +61,10 @@ const Instructors = () => {
                 alt='our prestigious instructor 2'
               />
               <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-                Kolsum Doe
+                {t('inst2')}
               </Typography>
               <Typography sx={{ mb: 1.5 }} color='text.secondary'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus
-                dolorum esse eligendi?
+                {t('lorem')}
               </Typography>
               <LinkedInIcon />
               <InstagramIcon />
@@ -84,11 +85,10 @@ const Instructors = () => {
                 alt='our prestigious instructor 3'
               />
               <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-                Adam Smith
+                {t('inst3')}
               </Typography>
               <Typography sx={{ mb: 1.5 }} color='text.secondary'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus
-                dolorum esse eligendi?
+                {t('lorem')}
               </Typography>
               <LinkedInIcon />
               <InstagramIcon />
@@ -109,11 +109,10 @@ const Instructors = () => {
                 alt='our prestigious instructor 4'
               />
               <Typography variant='h5' sx={{ mb: 2 }} component='div'>
-                Steve Smith
+                {t('inst4')}
               </Typography>
               <Typography sx={{ mb: 1.5 }} color='text.secondary'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quas quidem possimus
-                dolorum esse eligendi?
+                {t('lorem')}
               </Typography>
               <LinkedInIcon />
               <InstagramIcon />

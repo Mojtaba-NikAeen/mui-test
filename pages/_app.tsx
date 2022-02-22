@@ -5,6 +5,7 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { appWithTranslation, useTranslation } from 'next-i18next'
 
 const theme = createTheme()
 
@@ -21,6 +22,11 @@ theme.typography.h4 = {
 // theme.palette.mode = 'dark'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { i18n } = useTranslation()
+  if (typeof window !== 'undefined') {
+    document.body.dir = i18n.dir()
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
@@ -28,4 +34,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)

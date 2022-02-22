@@ -2,8 +2,13 @@ import Grid from '@mui/material/Grid'
 import Image from 'next/image'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
+import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const HeroSection = () => {
+  const router = useRouter()
+  const { t } = useTranslation('common')
   return (
     <Grid
       container
@@ -24,22 +29,23 @@ const HeroSection = () => {
       >
         <Grid item>
           <Typography variant='h4' color='white'>
-            Become a{' '}
-            <Typography variant='h4' color='#dacc08' display='inline'>
+            {t('title')}
+            {/* <Typography variant='h4' color='#dacc08' display='inline'>
               Web Developer
-            </Typography>
+            </Typography> */}
           </Typography>
         </Grid>
         <Grid item>
           <Typography variant='body1' color='white' paddingX={2}>
-            We focus on teaching our students the fundamentals of the latest and greatest
-            technologies to prepare them for their first dev role{' '}
+            {t('text')}
           </Typography>
         </Grid>
         <Grid item>
-          <Button size='large' variant='contained'>
-            Sign up to Start
-          </Button>
+          <Link href='/' locale={router.locale === 'en' ? 'fa' : 'en'} passHref>
+            <Button size='large' variant='contained'>
+              {t('change-locale')}
+            </Button>
+          </Link>
         </Grid>
       </Grid>
       <Grid
