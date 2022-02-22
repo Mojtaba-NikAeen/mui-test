@@ -14,7 +14,8 @@ theme.typography.h4 = {
   },
   [theme.breakpoints.down('md')]: {
     fontSize: '1.6rem'
-  }
+  },
+  fontWeight: 400
 }
 
 // theme.palette.mode = 'dark'
