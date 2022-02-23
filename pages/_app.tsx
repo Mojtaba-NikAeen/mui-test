@@ -1,13 +1,13 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import '@fontsource/roboto/300.css'
-import '@fontsource/roboto/400.css'
-import '@fontsource/roboto/500.css'
-import '@fontsource/roboto/700.css'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { appWithTranslation, useTranslation } from 'next-i18next'
 
-const theme = createTheme()
+const theme = createTheme({
+  typography: {
+    fontFamily: `'Roboto','Shabnam'`
+  }
+})
 
 theme.typography.h4 = {
   [theme.breakpoints.up('md')]: {
