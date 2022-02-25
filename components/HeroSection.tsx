@@ -9,10 +9,11 @@ import { useRouter } from 'next/router'
 const HeroSection = () => {
   const router = useRouter()
   const { t } = useTranslation('common')
+
   return (
     <Grid
       container
-      sx={{ height: '20rem', backgroundColor: '#212529', borderRadius: 1 }}
+      sx={{ height: '20rem', bgcolor: 'background.default', borderRadius: 2 }}
       direction='row'
       justifyContent='space-between'
       alignItems='center'
@@ -28,21 +29,18 @@ const HeroSection = () => {
         sm={7}
       >
         <Grid item>
-          <Typography variant='h4' color='white'>
+          <Typography variant='h4' color='text.primary'>
             {t('title')}
-            {/* <Typography variant='h4' color='#dacc08' display='inline'>
-              Web Developer
-            </Typography> */}
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant='body1' color='white' paddingX={2}>
+          <Typography variant='body1' color='text.primary' paddingX={2}>
             {t('text')}
           </Typography>
         </Grid>
         <Grid item>
           <Link href='/' locale={router.locale === 'en' ? 'fa' : 'en'} passHref>
-            <Button size='large' variant='contained'>
+            <Button size='large' variant='contained' color='primary'>
               {t('change-locale')}
             </Button>
           </Link>
