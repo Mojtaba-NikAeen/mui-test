@@ -55,7 +55,7 @@ const HeroSection = () => {
         }}
         sm={5}
       >
-        <Image src='/react.svg' width={400} height={350} alt='' />
+        <Image src={t('svg')} width={400} height={350} alt='' />
       </Grid>
     </Grid>
   )

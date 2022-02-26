@@ -26,5 +26,6 @@
   "login": "ورود",
   "profile": "پروفایل",
   "logout": "خروج",
-  "homepage": "صفحه اصلی"
+  "homepage": "صفحه اصلی",
+  "svg": "/showcase.svg"
 }

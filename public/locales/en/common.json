@@ -27,5 +27,6 @@
   "login": "Login",
   "profile": "Profile",
   "logout": "Log Out",
-  "homepage": "Homepage"
+  "homepage": "Homepage",
+  "svg": "/react.svg"
 }
