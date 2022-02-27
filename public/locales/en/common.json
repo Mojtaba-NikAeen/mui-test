@@ -28,5 +28,6 @@
   "profile": "Profile",
   "logout": "Log Out",
   "homepage": "Homepage",
-  "svg": "/react.svg"
+  "svg": "/react.svg",
+  "reservation": "Reservation"
 }

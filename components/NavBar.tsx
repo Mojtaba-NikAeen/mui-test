@@ -19,6 +19,7 @@ import { styled } from '@mui/material/styles'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Switch, { SwitchProps } from '@mui/material/Switch'
 import { useStore } from '../store/store'
+import { useRouter } from 'next/router'
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -70,6 +71,8 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 const NavBar = () => {
   const setTheme = useStore(state => state.setTheme)
   const darkMode = useStore(state => state.darkMode)
+
+  const router = useRouter()
 
   const [value, setValue] = useState(false)
 
@@ -156,6 +159,7 @@ const NavBar = () => {
                 onClose={handleClose}
               >
                 <MenuItem onClick={loginoutHandler}>{t('login')}</MenuItem>
+                <MenuItem onClick={() => router.push('/reservation')}>{t('reservation')}</MenuItem>
               </Menu>
             </div>
           )}

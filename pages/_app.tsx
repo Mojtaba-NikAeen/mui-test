@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { appWithTranslation, useTranslation } from 'next-i18next'
 import { useStore } from '../store/store'
+import LocalizationProvider from '@mui/lab/LocalizationProvider'
+import AdapterJalali from '@date-io/date-fns-jalali'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const darkMode = useStore(state => state.darkMode)
@@ -38,9 +40,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <LocalizationProvider dateAdapter={AdapterJalali}>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </LocalizationProvider>
   )
 }
 
